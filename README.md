@@ -28,7 +28,13 @@ CFB = CLOUDFLARE BY PASS
 ## HOW To Using
 ```bash
 git clone github.com/Fad3dty/3XPDOS
+```
+```bash
 cd 3XPDOS
+```
+```bash
 pip3 install -r requirement.txt
+```
+```bash
 python3 start.py
 ```
