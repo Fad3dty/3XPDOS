@@ -1,0 +1,52 @@
+#!/bash/python3
+
+import sys
+import socket
+import datetime
+from os import system
+from colorama import init, Fore
+Y = Fore.YELLOW
+R = Fore.RED
+    
+
+host = input("Host: ")
+target = socket.gethostbyname(host)
+
+print("-" * 50)
+print("Scanning target: " + host)
+print("Time started: " + str(datetime.datetime.now()))
+print("-" * 50) 
+
+try:
+
+    for port in range(int("1"), int("65535") + 1 ): #ports to be scanned  
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #specifying the address family and socket type
+        socket.setdefaulttimeout(1)
+        result = s.connect_ex((target, port)) # returns an error indicator => 0:success, 1:error
+    
+        if (result == 0):
+            print(f"{Y} Port {port} open")
+        
+        else:
+            print(f"{R} Port {port} closed")
+        s.close()
+    
+except KeyboardInterrupt:
+	print(" ")
+	met = input("back to method y/n?")
+	if met == 'y':
+		system("python3 WORK")
+	else:
+		sys.exit()
+except socket.gaierror:
+    print("The hostname couldn't be resolved.")
+    sys.exit()
+    
+except socket.error:
+    print("Couldn't connect to the server.")
+    sys.exit()   
+    
+
+
+
+

