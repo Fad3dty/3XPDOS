@@ -14,7 +14,19 @@ RANDOM L4<br>
 SENDING A REQUEST UDP AND TCP
 
 HEAD<br>SENDING A REQUEST HEAD
+
 POST<br>SENDING A REQUEST POST
+
 NULL<br>SENDING A REQUEST WITH USER AGENT AND... CONTAINS "NULL"
+
 GET<br> SENDING A REQUEST GET
+
 CFB = CLOUDFLARE BY PASS
+
+## HOW To Using
+```bash
+git clone github.com/Fad3dty/3XPDOS
+cd 3XPDOS
+pip3 install -r requirement.txt
+python3 start.py
+```
