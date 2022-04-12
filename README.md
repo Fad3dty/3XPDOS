@@ -1,4 +1,6 @@
-# 3XPDOS
+# 3XPDOS V1.4.1
+
+## SEPECIAL THANKS TO LEONARDO >.<
 
 ![Fadedty](https://l.top4top.io/p_229328tz58.jpg)
 
